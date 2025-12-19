@@ -10,13 +10,15 @@ def main():
     NUMERO_CIDADES = 8
     
     # Vai gerar uma seed aleatória agora para podermos registrar qual foi usado
-    seedAleatoria = random.randint(0, 10000)
+    seed = random.randint(0, 10000)
+    # Caso queira um seed fixo para testes, descomente a linha abaixo:
+    # seed = 30 
     
     print(f"--- Gerando Grafo com {NUMERO_CIDADES} cidades ---")
-    print(f"--- ID da Execução (Seed): {seedAleatoria} ---")
+    print(f"--- ID da Execução (Seed): {seed} ---")
     
     # O grafo é gerado uma vez. Todos os algoritmos usarão este mesmo objeto 'grafo'.
-    grafo = gerarMatrizDistancias(NUMERO_CIDADES, seed=seedAleatoria)
+    grafo = gerarMatrizDistancias(NUMERO_CIDADES, seed=seed)
     imprimirMatriz(grafo)
     
     print("\n--- Comparação (Todos usando o mesmo grafo acima) ---")

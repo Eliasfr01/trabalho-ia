@@ -4,15 +4,12 @@ from dfs import buscaProfundidade
 from ucs import buscaCustoUniforme
 from gulosa import buscaGulosa
 from aEstrela import algoritmoAEstrela
-import random # Random é importado para gerar uma seed aleatória para exibir no log
 
 def main():
     NUMERO_CIDADES = 8
     
-    # Vai gerar uma seed aleatória agora para podermos registrar qual foi usado
-    seed = random.randint(0, 10000)
-    # Caso queira um seed fixo para testes, descomente a linha abaixo:
-    # seed = 30 
+    # Caso queira grafos aleatórios diferentes a cada execução, defina seed = None:
+    seed = 30 
     
     print(f"--- Gerando Grafo com {NUMERO_CIDADES} cidades ---")
     print(f"--- ID da Execução (Seed): {seed} ---")
